@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PIt-5p-s1c">
+                            <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="414" placeholderIntrinsicHeight="100.33333333333331" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PIt-5p-s1c">
                                 <rect key="frame" x="10" y="19.999999999999993" width="414" height="100.33333333333331"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBL-MS-Vw3">
@@ -41,6 +41,14 @@
                                     <constraint firstAttribute="trailing" secondItem="SIU-jm-4dE" secondAttribute="trailing" id="rfL-uL-YFM"/>
                                 </constraints>
                             </stackView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Default Image" translatesAutoresizingMaskIntoConstraints="NO" id="Bk9-il-NtY">
+                                <rect key="frame" x="10" y="128.33333333333337" width="320" height="256"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Bk9-il-NtY" secondAttribute="height" multiplier="1:1" id="0zR-VK-YEx"/>
+                                    <constraint firstAttribute="width" secondItem="Bk9-il-NtY" secondAttribute="height" multiplier="1:1" id="BMe-VD-jd9"/>
+                                    <constraint firstAttribute="width" secondItem="Bk9-il-NtY" secondAttribute="height" multiplier="1:1" id="xPA-tG-WOs"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -48,6 +56,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PIt-5p-s1c" secondAttribute="trailing" id="6Pu-RL-7xe"/>
                             <constraint firstItem="PIt-5p-s1c" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="5" id="BAQ-Ky-rm3"/>
                             <constraint firstItem="PIt-5p-s1c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GNM-eb-fzs"/>
+                            <constraint firstItem="Bk9-il-NtY" firstAttribute="top" secondItem="PIt-5p-s1c" secondAttribute="bottom" constant="8" id="JQN-cb-WGd"/>
                             <constraint firstItem="PIt-5p-s1c" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="dNJ-co-VOb"/>
                             <constraint firstItem="PIt-5p-s1c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="eDv-YR-LVC"/>
                             <constraint firstItem="PIt-5p-s1c" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="esb-Jy-A4B"/>
@@ -60,6 +69,7 @@
                     <connections>
                         <outlet property="mealNameLabel" destination="lBL-MS-Vw3" id="e0M-TR-Dbe"/>
                         <outlet property="nameTextField" destination="SIU-jm-4dE" id="Tkm-fc-Fw8"/>
+                        <outlet property="photoImageView" destination="Bk9-il-NtY" id="7Ia-0c-jIe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -73,4 +83,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="75.815217391304358"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Default Image" width="256" height="158.5"/>
+    </resources>
 </document>
