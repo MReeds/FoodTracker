@@ -43,11 +43,15 @@
                             </stackView>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Default Image" translatesAutoresizingMaskIntoConstraints="NO" id="Bk9-il-NtY">
                                 <rect key="frame" x="10" y="128.33333333333337" width="320" height="256"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Bk9-il-NtY" secondAttribute="height" multiplier="1:1" id="0zR-VK-YEx"/>
                                     <constraint firstAttribute="width" secondItem="Bk9-il-NtY" secondAttribute="height" multiplier="1:1" id="BMe-VD-jd9"/>
                                     <constraint firstAttribute="width" secondItem="Bk9-il-NtY" secondAttribute="height" multiplier="1:1" id="xPA-tG-WOs"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="TRa-g2-2aS" appends="YES" id="mf9-Nc-2Of"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -79,6 +83,11 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
+                <tapGestureRecognizer id="TRa-g2-2aS">
+                    <connections>
+                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="kWa-t2-s10"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="75.815217391304358"/>
         </scene>
