@@ -21,9 +21,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         nameTextField.delegate = self
     }
 //MARK: UITextFieldDelegate
-    func textFieldShouldReturn(_textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         //Hide the keyboard
-        _textField.resignFirstResponder()
+        textField.resignFirstResponder()
         return true
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
